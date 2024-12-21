@@ -3,5 +3,5 @@ c1 = "C"
 
 #raw string ignores special character
 
-dir = r'C:\pWaquar\n.txt'
+dir = r'C:\pWaquar\t.txt'
 print(dir)
