@@ -6,6 +6,7 @@ import pytest
 def test_method1():
     print("This is pytest method.")
     assert 1-1 == 2
+
 @pytest.mark.regression
 def test_method2():
     print("test2")
