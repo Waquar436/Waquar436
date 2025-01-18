@@ -12,7 +12,7 @@ def test_katalon_chrome():
     # chrome_options.add_argument("--start-maximized")
     # chrome_options.add_argument("--window-size=900,600")
     chrome_options.add_argument("--headless")
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(chrome_options)
     driver.get("https://katalon-demo-cura.herokuapp.com/")
     make_appointment_element = driver.find_element(By.ID,value="btn-make-appointment")
     make_appointment_element.click()
