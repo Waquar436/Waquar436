@@ -8,4 +8,4 @@ import allure
 @allure.description("verify that 62 items are there for macmini")
 
 def test_ebay():
-
+    print("do it")
