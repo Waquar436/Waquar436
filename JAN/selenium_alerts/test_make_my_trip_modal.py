@@ -15,5 +15,8 @@ def test_js_modal():
     driver.get("https://www.makemytrip.com/")
 
     WebDriverWait(driver=driver, timeout=5).until(ec.visibility_of_element_located((By.XPATH, "//span[@class='commonModal__close']")))
-    modal = driver.find_element(By.XPATH, "//span[@class='commonModal__close']")
-    modal.click()
+    modal = driver.find_element(By.XPATH, "//input[@placeholder='Enter Mobile Number']")
+    modal.send_keys("6380365310")
+    continue_button=driver.find_element(By.XPATH,"//span[normalize-space()='Continue']")
+    continue_button.click()
+
