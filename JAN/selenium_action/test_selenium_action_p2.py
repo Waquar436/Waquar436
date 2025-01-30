@@ -21,5 +21,6 @@ def test_verify_action_keyboard():
     actions_builder=ActionBuilder(driver=driver)
     actions_builder.pointer_action.pointer_up(MouseButton.BACK)
     actions_builder.perform()
+    time.sleep(5)
     driver.quit()
 

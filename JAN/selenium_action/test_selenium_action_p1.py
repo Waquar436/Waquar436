@@ -19,6 +19,6 @@ def test_verify_action_keyboard():
      .send_keys_to_element(first_name,"the testing academy")
      .key_up(Keys.SHIFT)
      .perform())
-    time.sleep(10)
+    time.sleep(5)
     driver.quit()
 
