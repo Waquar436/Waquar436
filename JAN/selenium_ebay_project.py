@@ -16,11 +16,17 @@ def test_ebay():
     search_btn=driver.find_element(By.CSS_SELECTOR,".gh-search-button__label")
     search_btn.click()
     #//div[@class="s-item__title"] -> s-item__title
-    list_of_items=driver.find_elements(By.CSS_SELECTOR,"s-item__title")
-    list_of_item_price=driver.find_elements(By.CSS_SELECTOR,"s-item__price")
-    for items in list_of_items:
-        print(items.text)
-    for items_prise in list_of_item_price:
-        print(items_prise.text)
+    list_of_items=driver.find_elements(By.XPATH,"//div[@class='s-item__title']")
+    list_of_item_price=driver.find_elements(By.XPATH,"//span[@class='s-item__price']")
+    title_text=[item.text for item in list_of_items]
+    price_text=[price.text for price in list_of_item_price]
+    for text,price in zip(title_text,price_text):
+        print(text,price)
+    driver.quit()
+    # for items in list_of_items:
+    #     print(items.text)
+    # for items_prise in list_of_item_price:
+    #     print(items_prise.text)
+
 
 
