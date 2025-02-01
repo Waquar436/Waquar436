@@ -16,11 +16,10 @@ from selenium.webdriver.common.keys import Keys
 def test_verify_action_keyboard():
     driver=webdriver.Chrome()
     driver.get("https://awesomeqa.com/selenium/mouse_interaction.html")
-    atag=driver.find_element(By.ID,"click")
-    atag.click()
-    actions_builder=ActionBuilder(driver=driver)
-    actions_builder.pointer_action.pointer_up(MouseButton.BACK)
-    actions_builder.perform()
-    time.sleep(5)
+    #draggable
+    element_to_hold=driver.find_element(By.ID,"draggable")
+    actions=ActionChains(driver)
+    actions.click_and_hold(on_element=element_to_hold).perform()
+    time.sleep(10)
     driver.quit()
 
