@@ -19,5 +19,12 @@ def test_verify_action_Windows():
     parent_window=driver.current_window_handle
     link=driver.find_element(By.LINK_TEXT,"Click Here")
     link.click()
+    window_handles=driver.window_handles
+    # print(window_handles)
+    for handle in window_handles:
+        driver.switch_to.window(handle)
+        if "New Window" in driver.page_source:
+            print("Test case passed")
+            break
 
 
